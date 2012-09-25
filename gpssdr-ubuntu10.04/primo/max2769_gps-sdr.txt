@@ -1,0 +1,33 @@
+% MAX2769 CONFIGURATION FILE
+% This is a comment
+
+% Configures RX and IF sections, bias settings for individual blocks.
+1 0 0000 11 10 01 0 01 1 1 001101 00 0 1 1           CONF_ONE
+
+% Configures AGC and output sections.
+0 000010101010 00 00 01 010 00 1 1 00                CONF_TWO
+
+% Configures support and test functions for IF filter and AGC.
+111010 1 0 1 1 1 1 1 1 1 1 0 0 0 111 01 1 1 0 0      CONF_THREE
+
+% PLL, VCO, and CLK settings.
+1 0 0 1 1 11 01 10000 0000 0 0 0 000 1 0 0 0         PLL_CONF
+
+% PLL main and reference division ratios, other controls.
+000011000000000 0000010000 000                       N_R_DIV
+
+% PLL fractional division ratio, other controls.
+1000 0000 0000 0000 0000 01110000                    F_DIV
+
+% DSP interface number of frames to stream.
+1000 0000 0000 0000 0000 0000 0000                   STRM
+
+% Fractional clock-divider values.
+000100000000 011000011011 0 0 1 0                    CLK
+
+% Reserved for test mode.
+0001 1110 0000 1111 0100 0000 0001                   TEST_ONE
+
+% Reserved for test mode.
+0001 0100 1100 0000 0100 0000 0010                   TEST_TWO
+

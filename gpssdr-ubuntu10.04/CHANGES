@@ -1,0 +1,13 @@
+
+13.10.2010
+* for gps-gse (the gps-sdr GUI) install: sudo aptitude install libwxgtk2.8-dev
+* for gps-sdr used with USRPv1 or USRPv1 the gnuradio package should be installed (see gnuradio.com)
+* line 47 of usrp/db_dbs_rx.h changed to: #include <usrp/usrp_standard.h>
+* line 48 of usrp/db_dbs_rx.h changed to: #include "usrp_i2c_addr.h"
+* line 48 of usrp/db_dbs_rx.h changed to: #include "fpga_regs_standard.h"
+* line 43 of usrp/gn3s.h changed to: #include <usrp/usrp_bytesex.h>
+* line 44 of usrp/gn3s.h changed to: #include <usrp/usrp_prims.h>
+
+* folder bin added
+* file bin/gps_1ms.bin added (1ms of gps data)
+* matlab scrip matlab/down_convert.m added

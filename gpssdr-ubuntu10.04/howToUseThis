@@ -1,0 +1,46 @@
+13.10.2010
+
+
+### HOW TO COMPILE AND RUN GPS-SDR ###
+
+1) copy and unzip the folder gps-sdr in your desktop or 
+	wherever you want.
+2) In your terminal execute: 
+	cd gps-sdr
+	make
+3) If all goes well you should have two executable files: the
+	command line program gps-sdr and its gui, gps-gse
+
+4) In your terminal execute:
+	cd gps-sdr
+	./gps-sdr -file bin/gps_1ms.bin
+
+ If all goes well you should see the effect of the acquisition
+ of 5 satellites, unfortunately the bit file gps_1ms.bin is only
+ 1ms of data. For better results you can ether get the Kai Borre,
+ Akos book and convert the files that come with it with the application
+ matlab/down_convert.m. Alternatively you can also use a USRP v1 or USRP
+ v2 connected to your pc.
+
+
+### HOW TO DEBUG GPS_SDR ###
+
+1) open the file Makefile and change line 21 in:
+	LDFLAGS	 = -lpthread -lusrp -m32 -g
+
+2) In your terminal execute: 
+	cd gps-sdr
+	make clean
+	make
+	
+3) Now, your make file can be debugged with ddd (sudo apt-get install ddd)
+
+4) In your terminal execute:
+	ddd gps-sdr
+	
+5) ddd will open, choose Program-run and in the Run with Arguments window
+	choose -file bin/gps_1ms.bin
+
+6) a better way to do this could be qtcreator
+
+ 
